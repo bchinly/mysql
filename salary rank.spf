@@ -45,43 +45,26 @@
 			<integer>1</integer>
 			<key>contentSelection</key>
 			<data>
-			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
-			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
-			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
-			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
-			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
-			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
-			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
-			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeAClJpZNIeHy0uXxAPTlNN
-			dXRhYmxlU3RyaW5noy0vI1hOU1N0cmluZ9IeHzEyXk5TTXV0YWJs
-			ZUFycmF5ozEzI1dOU0FycmF50h4fIjWiIiNfEA9OU0tleWVkQXJj
-			aGl2ZXLRODlUZGF0YYABAAgAEQAaACMALQAyADcARQBLAFIAWgBl
-			AGwAcAByAHQAdgB6AHwAfgCAAIIAhwCMAJEAugDBAMIAwwDFAMoA
-			1QDeAPQA+AEFAQ4BEwEVARcBGQEeASgBKgEtATIBRAFIAVEBVgFl
-			AWkBcQF2AXkBiwGOAZMAAAAAAAACAQAAAAAAAAA6AAAAAAAAAAAA
-			AAAAAAABlQ==
+			YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJX
+			TlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAF
+			gAdUdHlwZVRyb3dzXxAdU2VsZWN0aW9uRGV0YWlsVHlwZU5TSW5k
+			ZXhTZXTSFwsYGVxOU1JhbmdlQ291bnQQAIAG0hscHR5aJGNsYXNz
+			bmFtZVgkY2xhc3Nlc1pOU0luZGV4U2V0oh8gWk5TSW5kZXhTZXRY
+			TlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVk
+			QXJjaGl2ZXLRJidUZGF0YYABAAgAEQAaACMALQAyADcAQABGAE0A
+			VQBgAGcAagBsAG4AcQBzAHUAdwB8AIEAoQCmALMAtQC3ALwAxwDQ
+			ANsA3gDpAPIA9wEEAQcBGQEcASEAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
 			</data>
 			<key>contentSortColIsAsc</key>
 			<true/>
 			<key>contentViewport</key>
-			<string>{{0, 0}, {748, 530}}</string>
+			<string>{{0, 0}, {694, 450}}</string>
 			<key>isToolbarVisible</key>
 			<true/>
 			<key>queries</key>
-			<string>select (
-case name
-when @curType
-then @curRow := @curRow +1
-Else @curRow:= 1 and @curType := name end
-) as rank,
-name,
-amount
-from employee join salary
-on employee.id=salary.employee_id,
-(select @curRow:= 0, @curType := '') rank
-having rank = 0</string>
-			<key>table</key>
-			<string>employee</string>
+			<string></string>
 			<key>view</key>
 			<string>SP_VIEW_CUSTOMQUERY</string>
 			<key>windowVerticalDividerPosition</key>
@@ -96,304 +79,216 @@ having rank = 0</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
-		<string>select (
-case name
-when @curType
-then @curRow := @curRow +1
-Else @curRow:= 1 and @curType := name end
-) as rank,
-name,
-amount
-from employee join salary
-on employee.id=salary.employee_id,
-(select @curRow:= 0, @curType := '') rank
-having rank = 0</string>
-		<string>select (
-case name
-when @curType
-then @curRow := @curRow +1
-Else @curRow:= 1 and @curType := name end
-) as rank,
-name,
-amount
-from employee join salary
-on employee.id=salary.employee_id
-(select @curRow:= 0, @curType := '') rank,</string>
-		<string>select (
-case name
-when @curType
-then @curRow := @curRow +1
-Else @curRow:= 1 and @curType := name end
-) as rank,
-name,
-amount
-from employee join salary,
-on employee.id=salary.employee_id
-(select @curRow:= 0, @curType := '') rank,</string>
-		<string>select ()
-case name
-when @curType
-then @curRow := @curRow +1
-Else @curRow:= 1 and @curType := name end
-) as rank,
-name,
-amount
-from employee join salary,
-on employee.id=salary.employee_id
-(select @curRow:= 0, @curType := '') rank,</string>
-		<string>select ()
-case name
-when @curType
-then @curRow := @curRow +1
-Else @curRow:= 1 and @curType := name end
-) as rank,
-name,
-amount
-from employee join salary,
-(select @curRow:= 0, @curType := '') rank,
-on employee.id=salary.employee_id</string>
-		<string>select ()
-case name
-when @curType
-then @curRow := @curRow +1
-Else @curRow:= 1 and @curType := name end
-) as rank,
-name,
-amount
-from employee join salary
-on employee.id=salary.employee_id</string>
-		<string>select name, amount
-case name
-when @curType
-then @curRow := @curRow +1
-Else @curRow:= 1 and @curType := name end as rank,
-from employee join salary
-on employee.id=salary.employee_id</string>
-		<string>select name, amount
-from employee join salary
-on employee.id=salary.employee_id</string>
-		<string>select name, amont
-from employee join salary
-on employee.id=salary.employee_id</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-HAVING    rank = 0</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            @curRow := -1
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) +1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-HAVING    rank = 1</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-HAVING    rank = 1</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-HAVING    rank = 1</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 0 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-HAVING    rank = 1</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-HAVING    rank = 3</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-HAVING    rank = 2</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-HAVING    rank = 0</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank 1
-HAVING    rank = 1</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank 1</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank</string>
+		<string>DROP TABLE IF EXISTS student;
+CREATE TABLE student(
+	first_name VARCHAR(30) NOT NULL,
+	last_name VARCHAR(30) NOT NULL,
+	email VARCHAR(60) NULL,
+	street VARCHAR(50) NOT NULL,
+	city VARCHAR(40) NOT NULL,
+	state CHAR(2) NOT NULL DEFAULT "PA",
+	zip MEDIUMINT UNSIGNED NOT NULL,
+	phone VARCHAR(20) NOT NULL,
+	birth_date DATE NOT NULL,
+	sex ENUM('M', 'F') NOT NULL,
+	date_entered TIMESTAMP,
+	lunch_cost FLOAT NULL,
+	student_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+)</string>
+		<string>CREATE TABLE student(
+	first_name VARCHAR(30) NOT NULL,
+	last_name VARCHAR(30) NOT NULL,
+	email VARCHAR(60) NULL,
+	street VARCHAR(50) NOT NULL,
+	city VARCHAR(40) NOT NULL,
+	state CHAR(2) NOT NULL DEFAULT "PA",
+	zip MEDIUMINT UNSIGNED NOT NULL,
+	phone VARCHAR(20) NOT NULL,
+	birth_date DATE NOT NULL,
+	sex ENUM('M', 'F') NOT NULL,
+	date_entered TIMESTAMP,
+	lunch_cost FLOAT NULL,
+	student_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+)</string>
+		<string>drop table employee;
+drop table employees;
+drop table salary;
+drop table sales</string>
+		<string>select * from employees order by salary desc;
+select top 1 salary from
+(select distinct top 3 salary
+from employees
+order by salary desc)
+result
+order by salary</string>
+		<string>select * from employees order by salary desc</string>
+		<string>select * from eployees order by salary desc</string>
+		<string>drop table if exists employees;
+create table employees (
+	id int not null auto_increment,
+	firstname varchar(255),
+	lastname varchar(255),
+	gender varchar(255),
+	salary int,
+	primary key (id)
+);
+Insert into Employees (firstname, lastname, gender, salary)
+values ('Ben', 'Hoskins', 'Male', 70000);
+Insert into Employees (firstname, lastname, gender, salary)
+values ('Mark', 'Hastings', 'Male', 60000);
+Insert into Employees (firstname, lastname, gender, salary)
+values ('Steve', 'Pound', 'Male', 45000);
+Insert into Employees (firstname, lastname, gender, salary)
+values ('Ben', 'Hoskins', 'Male', 70000);
+Insert into Employees (firstname, lastname, gender, salary)
+values ('Philip', 'Hastings', 'Male', 45000);
+Insert into Employees (firstname, lastname, gender, salary)
+values ('Mary', 'Lambeth', 'Female', 30000);
+Insert into Employees (firstname, lastname, gender, salary)
+values ('Valarie', 'Vikings', 'Female', 35000);
+Insert into Employees (firstname, lastname, gender, salary)
+values ('John', 'Stanmore', 'Male', 80000)</string>
+		<string>drop table if exists employees;
+create table employees (
+	id int not null auto_increment,
+	firstname varchar(255),
+	lastname varchar(255),
+	gender varchar(255),
+	salary int,
+	primary key (id)
+);
+Insert into Employees (firstname, lastname, gender, salary)
+values ('Ben', 'Hoskins', 'Male', 70000);
+Insert into Employees (firstname, lastname, gender, salary)
+Insert into Employees values ('Mark', 'Hastings', 'Male', 60000)</string>
+		<string>drop table if exists employees;
+create table employees (
+	id int not null auto_increment,
+	firstname varchar(255),
+	lastname varchar(255),
+	gender varchar(255),
+	salary int,
+	primary key (id)
+);
+Insert into Employees (firstname, lastname, gender, salary)
+values ('Ben', 'Hoskins', 'Male', 70000);
+Insert into Employees values ('Mark', 'Hastings', 'Male', 60000)</string>
+		<string>drop table if exists employees;
+create table employees (
+	id int not null auto_increment,
+	firstname varchar(255),
+	lastname varchar(255),
+	gender varchar(255),
+	salary int,
+	primary key (id)
+);
+Insert into Employees values (1, 'Ben', 'Hoskins', 'Male', 70000)
+Insert into Employees values (2, 'Mark', 'Hastings', 'Male', 60000)
+Insert into Employees values (3, 'Steve', 'Pound', 'Male', 45000)
+Insert into Employees values (4, 'Ben', 'Hoskins', 'Male', 70000)
+Insert into Employees values (5, 'Philip', 'Hastings', 'Male', 45000)
+Insert into Employees values (6, 'Mary', 'Lambeth', 'Female', 30000)
+Insert into Employees values (7, 'Valarie', 'Vikings', 'Female', 35000)
+Insert into Employees values (8, 'John', 'Stanmore', 'Male', 80000)</string>
+		<string>drop table if exists employees;
+create table employees (
+	id int not null auto_increment,
+	firstname varchar(255),
+	lastname varchar(255),
+	gender varchar(255),
+	salary int,
+	primary key (id)
+);
+Insert into Employees values (1, 'Ben', 'Hoskins', 'Male', 70000);
+Insert into Employees values (2, 'Mark', 'Hastings', 'Male', 60000);
+Insert into Employees values (3, 'Steve', 'Pound', 'Male', 45000)
+Insert into Employees values (4, 'Ben', 'Hoskins', 'Male', 70000)
+Insert into Employees values (5, 'Philip', 'Hastings', 'Male', 45000)
+Insert into Employees values (6, 'Mary', 'Lambeth', 'Female', 30000)
+Insert into Employees values (7, 'Valarie', 'Vikings', 'Female', 35000)
+Insert into Employees values (8, 'John', 'Stanmore', 'Male', 80000)</string>
+		<string>drop table if exists employees;
+create table employees (
+	id int not null auto_increment,
+	firstname varchar(255),
+	lastname varchar(255),
+	gender varchar(255),
+	salary int,
+	primary key (id)
+);
+Insert into Employees values ('Ben', 'Hoskins', 'Male', 70000)</string>
+		<string>drop table if exists employees;
+create table employees (
+	id int not null auto_increment,
+	firstname varchar(255),
+	lastname varchar(255),
+	gender varchar(255),
+	salary int,
+	primary key (id)
+);
+Insert into Employees values ('Ben', 'Hoskins', 'Male', 70000)
+Insert into Employees values ('Mark', 'Hastings', 'Male', 60000)
+Insert into Employees values ('Steve', 'Pound', 'Male', 45000)
+Insert into Employees values ('Ben', 'Hoskins', 'Male', 70000)
+Insert into Employees values ('Philip', 'Hastings', 'Male', 45000)
+Insert into Employees values ('Mary', 'Lambeth', 'Female', 30000)
+Insert into Employees values ('Valarie', 'Vikings', 'Female', 35000)
+Insert into Employees values ('John', 'Stanmore', 'Male', 80000)</string>
+		<string>drop table if exists employees;
+create table employees (
+	id int not null auto_increment,
+	name varchar(255),
+	salary int,
+	primary key (id)
+)</string>
+		<string>drop table if exists employees;
+create table employees (
+	id int not null auto_increment,
+	name varchar(255),
+	primary key (id)
+)</string>
+		<string>Create table Employees
+(
+ID int primary key identity,
+FirstName nvarchar(50),
+LastName nvarchar(50),
+Gender nvarchar(50),
+Salary int
+)</string>
+		<string>drop table if exists employees
+
+CREATE TABLE employees (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255),
+	salary int,
+    PRIMARY KEY (ID)
+)</string>
+		<string>drop table if exists employees
+
+CREATE TABLE employees (
+    id int NOT NULL AUTO_INCREMENT,
+    Name varchar(255),
+	salary int,
+    PRIMARY KEY (ID)
+)</string>
+		<string>drop table if exists employees
+
+CREATE TABLE employees (
+    id int NOT NULL AUTO_INCREMENT,
+    FirstName varchar(255),
+    LastName varchar(255),
+    gender varchar(255),
+    PRIMARY KEY (ID)
+)</string>
+		<string>drop table if exists Employees
+
+CREATE TABLE employees (
+    id int primary key identity,
+    FirstName varchar(255),
+    LastName varchar(255),
+    gender varchar(255),
+    salary int
+)</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>
