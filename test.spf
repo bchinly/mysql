@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>test</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>name</key>
+			<string>test</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
+			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
+			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
+			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
+			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
+			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
+			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeACld0ZXN0X2lk0h4fLS5f
+			EA9OU011dGFibGVTdHJpbmejLS8jWE5TU3RyaW5n0h4fMTJeTlNN
+			dXRhYmxlQXJyYXmjMTMjV05TQXJyYXnSHh8iNaIiI18QD05TS2V5
+			ZWRBcmNoaXZlctE4OVRkYXRhgAEACAARABoAIwAtADIANwBFAEsA
+			UgBaAGUAbABwAHIAdAB2AHoAfAB+AIAAggCHAIwAkQC6AMEAwgDD
+			AMUAygDVAN4A9AD4AQUBDgETARUBFwEZAR4BKAEqATIBNwFJAU0B
+			VgFbAWoBbgF2AXsBfgGQAZMBmAAAAAAAAAIBAAAAAAAAADoAAAAA
+			AAAAAAAAAAAAAAGa
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {1229, 763}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>DROP TABLE IF EXISTS test;
+
+CREATE TABLE test(
+	date DATE NOT NULL,
+	type ENUM('T', 'Q') NOT NULL,
+	max_score INT UNSIGNED NOT NULL,
+	class_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+);
+
+INSERT INTO test VALUES
+	('2014-8-25', 'Q', 15, 1, NULL),
+	('2014-8-27', 'Q', 15, 1, NULL),
+	('2014-8-29', 'T', 30, 1, NULL),
+	('2014-8-29', 'T', 30, 1, NULL),
+	('2014-8-27', 'Q', 15, 4, NULL),
+	('2014-8-29', 'T', 30, 4, NULL);
+</string>
+			<key>table</key>
+			<string>test</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>200</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>DROP TABLE IF EXISTS test;
+CREATE TABLE test(
+	date DATE NOT NULL,
+	type ENUM('T', 'Q') NOT NULL,
+	max_score INT UNSIGNED NOT NULL,
+	class_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+);
+INSERT INTO test VALUES
+	('2014-8-25', 'Q', 15, 1, NULL),
+	('2014-8-27', 'Q', 15, 1, NULL),
+	('2014-8-29', 'T', 30, 1, NULL),
+	('2014-8-29', 'T', 30, 1, NULL),
+	('2014-8-27', 'Q', 15, 4, NULL),
+	('2014-8-29', 'T', 30, 4, NULL)</string>
+		<string>DROP TABLE IF EXISTS test;
+CREATE TABLE test(
+	date DATE NOT NULL,
+	type ENUM('T', 'Q') NOT NULL,
+	class_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+);
+INSERT INTO test VALUES
+	('2014-8-25', 'Q', 15, 1, NULL),
+	('2014-8-27', 'Q', 15, 1, NULL),
+	('2014-8-29', 'T', 30, 1, NULL),
+	('2014-8-29', 'T', 30, 1, NULL),
+	('2014-8-27', 'Q', 15, 4, NULL),
+	('2014-8-29', 'T', 30, 4, NULL)</string>
+		<string>DROP TABLE IF EXISTS test;
+CREATE TABLE test(
+	date DATE NOT NULL,
+	type ENUM('T', 'Q') NOT NULL,
+	class_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+);
+INSERT INTO test VALUES
+	('2014-08-25', 'Q', 15, 1, NULL),
+	('2014-08-27', 'Q', 15, 1, NULL),
+	('2014-08-29', 'T', 30, 1, NULL),
+	('2014-08-29', 'T', 30, 1, NULL),
+	('2014-08-27', 'Q', 15, 4, NULL),
+	('2014-08-29', 'T', 30, 4, NULL)</string>
+		<string>CREATE TABLE test(
+	date DATE NOT NULL,
+	type ENUM('T', 'Q') NOT NULL,
+	class_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+)</string>
+		<string>CREATE TABLE test(
+	date DATE NOT NULL,
+	type ENUM('T', 'Q') NOT NULL,
+	class_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL AUTO INCREMENT PRIMARY KEY
+)</string>
+		<string>Select * FROM class</string>
+		<string>SELECT * FROM student;
+Select * FROM class</string>
+		<string>DROP TABLE IF EXISTS class;
+CREATE TABLE class(
+	name VARCHAR(30) NOT NULL,
+	class_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+);
+INSERT INTO class VALUES
+('English', NULL), ('Speech', NULL), ('Literature', NULL),
+('Algebra', NULL), ('Geometry', NULL), ('Trigonometry', NULL),
+('Calculus', NULL), ('Earth Science', NULL), ('Biology', NULL),
+('Chemistry', NULL), ('Physics', NULL), ('History', NULL), ('Art', NULL), ('Gym', NULL)</string>
+		<string>DROP TABLE IF EXISTS class;
+CREATE TABLE class(
+	name VARCHAR(30) NOT NULL,
+	class_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+)</string>
+		<string>DROP TABLE IF EXISTS class;
+CREATE TABLE class(
+	name VARCHAR(30) NOT NULL,
+	class_id UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+)</string>
+		<string>SELECT * FROM student</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+@curRank := @curRank + 1 as rank
+from employee inner join salary
+on employee.id=salary.employee_id</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+@curRank := @curRank + 1 as rank
+from employee inner join salary
+group by name
+on employee.id=salary.employee_id</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+@curRank := @curRank + 1 as rank
+from employee inner join salary
+on employee.id=salary.employee_id
+group by amount</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+@curRank := @curRank + 1 as rank
+from employee inner join salary
+on employee.id=salary.employee_id
+group by name
+having salary &gt; 0</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+@curRank := @curRank + 1 as rank
+from employee inner join salary
+on employee.id=salary.employee_id
+group by employee.name</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+@curRank := @curRank + 1 as rank
+from employee inner join salary
+on employee.id=salary.employee_id
+group by name</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+@curRank := @curRank + 1 as rank
+from employee inner join salary
+on employee.id=salary.employee_id
+group by salary.employee_id</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+@curRank := @curRank + 1 as rank
+from employee inner join salary
+on employee.id=salary.employee_id
+group by employee_id</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+@curRank := @curRank + 1 as rank
+from employee inner join salary
+on employee.id=salary.employee_id
+group by id</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.18</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

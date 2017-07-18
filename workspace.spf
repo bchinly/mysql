@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>test</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>name</key>
+			<string>workspace</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK4HCBUWFxgZHSQpLTE0OFUkbnVsbNMJ
+			CgsMEBRXTlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6MNDg+AAoAD
+			gASjERITgAWABoAIgA1UdHlwZVRyb3dzVGtleXNfECZTZWxlY3Rp
+			b25EZXRhaWxUeXBlUHJpbWFyeUtleWVkRGV0YWlsc9MJCgsaGxyg
+			oIAH0h4fICFaJGNsYXNzbmFtZVgkY2xhc3Nlc18QE05TTXV0YWJs
+			ZURpY3Rpb25hcnmjICIjXE5TRGljdGlvbmFyeVhOU09iamVjdNIK
+			CyUooiYngAmAC4AM0gsqKyxZTlMuc3RyaW5ngApac3R1ZGVudF9p
+			ZNIeHy4vXxAPTlNNdXRhYmxlU3RyaW5noy4wI1hOU1N0cmluZ9IL
+			KiszgApUZGF0ZdIeHzU2Xk5TTXV0YWJsZUFycmF5ozU3I1dOU0Fy
+			cmF50h4fIjmiIiNfEA9OU0tleWVkQXJjaGl2ZXLRPD1UZGF0YYAB
+			AAgAEQAaACMALQAyADcARgBMAFMAWwBmAG0AcQBzAHUAdwB7AH0A
+			fwCBAIMAiACNAJIAuwDCAMMAxADGAMsA1gDfAPUA+QEGAQ8BFAEX
+			ARkBGwEdASIBLAEuATkBPgFQAVQBXQFiAWQBaQFuAX0BgQGJAY4B
+			kQGjAaYBqwAAAAAAAAIBAAAAAAAAAD4AAAAAAAAAAAAAAAAAAAGt
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {748, 509}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>table</key>
+			<string>absense</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>200</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>ALTER TABLE test
+	DROP minscore INT NOT NULL AFTER type</string>
+		<string>ALTER TABLE test
+	DELETE minscore INT NOT NULL AFTER type</string>
+		<string>ALTER TABLE test
+	ADD minscore INT NOT NULL AFTER type</string>
+		<string>ALTER TABLE student
+	ADD maxscore INT NOT NULL AFTER type</string>
+		<string>ALTER TABLE STUDENT
+	ADD maxscore INT NOT NULL AFTER type</string>
+		<string>ALTER TABLE test
+	ADD maxscore INT NOT NULL AFTER type</string>
+		<string>CREATE TABLE absense(
+	student_id INT UNSIGNED NOT NULL,
+	date DATE NOT NULL,
+	PRIMARY KEY(student_id, date)
+)</string>
+		<string>CREATE TABLE score (
+	student_id INT UNSIGNED NOT NULL,
+	event_id INT UNSIGNED NOT NULL,
+	score INT NOT NULL,
+	PRIMARY KEY(event_id, student_id)
+)</string>
+		<string>CREATE TABLE test(
+	date DATE NOT NULL,
+	type ENUM('T', 'Q') NOT NULL,
+	class_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+)</string>
+		<string>CREATE TABLE test(
+	date DATE NOT NULL,
+	type ENUM('T', 'Q') NOT NULL,
+	class_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL AUTO INCREMENT PRIMARY KEY
+)</string>
+		<string>Select * FROM class</string>
+		<string>SELECT * FROM student;
+Select * FROM class</string>
+		<string>DROP TABLE IF EXISTS class;
+CREATE TABLE class(
+	name VARCHAR(30) NOT NULL,
+	class_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+);
+INSERT INTO class VALUES
+('English', NULL), ('Speech', NULL), ('Literature', NULL),
+('Algebra', NULL), ('Geometry', NULL), ('Trigonometry', NULL),
+('Calculus', NULL), ('Earth Science', NULL), ('Biology', NULL),
+('Chemistry', NULL), ('Physics', NULL), ('History', NULL), ('Art', NULL), ('Gym', NULL)</string>
+		<string>DROP TABLE IF EXISTS class;
+CREATE TABLE class(
+	name VARCHAR(30) NOT NULL,
+	class_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+)</string>
+		<string>DROP TABLE IF EXISTS class;
+CREATE TABLE class(
+	name VARCHAR(30) NOT NULL,
+	class_id UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+)</string>
+		<string>SELECT * FROM student</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+@curRank := @curRank + 1 as rank
+from employee inner join salary
+on employee.id=salary.employee_id</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+@curRank := @curRank + 1 as rank
+from employee inner join salary
+group by name
+on employee.id=salary.employee_id</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+@curRank := @curRank + 1 as rank
+from employee inner join salary
+on employee.id=salary.employee_id
+group by amount</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+@curRank := @curRank + 1 as rank
+from employee inner join salary
+on employee.id=salary.employee_id
+group by name
+having salary &gt; 0</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.18</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
