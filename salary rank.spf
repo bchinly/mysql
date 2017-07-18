@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>test</string>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>name</key>
+			<string>mysql</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
+			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
+			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
+			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
+			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
+			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
+			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeAClJpZNIeHy0uXxAPTlNN
+			dXRhYmxlU3RyaW5noy0vI1hOU1N0cmluZ9IeHzEyXk5TTXV0YWJs
+			ZUFycmF5ozEzI1dOU0FycmF50h4fIjWiIiNfEA9OU0tleWVkQXJj
+			aGl2ZXLRODlUZGF0YYABAAgAEQAaACMALQAyADcARQBLAFIAWgBl
+			AGwAcAByAHQAdgB6AHwAfgCAAIIAhwCMAJEAugDBAMIAwwDFAMoA
+			1QDeAPQA+AEFAQ4BEwEVARcBGQEeASgBKgEtATIBRAFIAVEBVgFl
+			AWkBcQF2AXkBiwGOAZMAAAAAAAACAQAAAAAAAAA6AAAAAAAAAAAA
+			AAAAAAABlQ==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {694, 450}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>select employee.name, 
+salary.amount, 
+salary.date,
+rank () over (partition by id order by salary.amount desc) as rank
+from employee join salary
+on employee.id = salary.employee_id
+where rank = 1;</string>
+			<key>table</key>
+			<string>salary</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>200</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+rank () over (partition by id order by salary.amount desc) as rank
+from employee join salary
+on employee.id = salary.employee_id
+where rank = 1</string>
+		<string>partition by employee.id order by salary.amount desc) as rank
+from employee joi</string>
+		<string>(partition by employee.id order by salary.amount desc) as rank
+from employee joi</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+employee.id,
+rank () over (partition by employee.id order by salary.amount desc) as rank
+from employee join salary
+on employee.id = salary.employee_id
+where rank = 1</string>
+		<string>select name, amount,
+from ( select name,
+				amount,
+				rank () over (partition by name order by amount) rank
+
+select employee.name, 
+salary.amount, 
+salary.date,
+employee.id,
+rank () over (partition by employee.id order by salary.amount desc) as rank
+from employee join salary
+on employee.id = salary.employee_id
+where rank = 1</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+employee.id
+rank () over (partition by employee.id order by salary.amount desc) as rank
+from employee join salary
+on employee.id = salary.employee_id
+where rank = 1</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+employee.employee_id
+rank () over (partition by employee_id order by salary.amount desc) as rank
+from employee join salary
+on employee.id = salary.employee_id
+where rank = 1</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+rank () over (partition by name order by amount desc) as rank
+from employee join salary
+on employee.id = salary.employee_id
+where rank = 1</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+rank () over (partition by name order by date desc) as rank
+from employee join salary
+on employee.id = salary.employee_id
+where rank = 1</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+rank () over (partition by employee.name order by salary.date desc) as rank
+from employee join salary
+on employee.id = salary.employee_id
+where rank = 1</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+rank () over (partition by employee.name order by salary.date desc) as rank
+from employee inner join salary
+on employee.id = salary.employee_id</string>
+		<string>select name, 
+amount, 
+date,
+rank () over (partition by employee.name order by salary.date desc) as rank
+from employee inner join salary
+on employee.id = salary.employee_id</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+rank () over (partition by employee.name order by salary.amount desc) as rank
+from employee inner join salary
+on employee.id = salary.employee_id</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+rank () over (partition by employee.name order by salary.amount desc) as rank
+from employee inner join salary
+on employee.id=salary.employee_id</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+rank () over (partition by employee.name order by salary.amount) as rank
+from employee inner join salary
+on employee.id=salary.employee_id</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+rank () over (partition by name order by amount) as rank
+from employee inner join salary
+on employee.id=salary.employee_id</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+rank () over (partition by name order by salary) as rank
+from employee inner join salary
+on employee.id=salary.employee_id</string>
+		<string>select employee.name, 
+salary.amount, 
+salary.date,
+rank () over (partition by name order by salary)
+from employee inner join salary
+on employee.id=salary.employee_id</string>
+		<string>drop table if exists employee;
+drop table if exists salary;
+CREATE TABLE employee (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255),
+    PRIMARY KEY (ID)
+);
+create table salary (
+id int not null auto_increment,
+employee_id INT,
+amount int,
+date varchar(255),
+primary key (id)
+);
+insert into employee (name)
+values ('jason');
+insert into employee (name)
+values ('michael');
+insert into employee (name)
+values ('billy');
+insert into employee (name)
+values ('fred');
+insert into employee (name)
+values ('sarah');
+insert into employee (name)
+values ('madison');
+insert into employee (name)
+values ('jamie');
+insert into salary (employee_id, amount, date)
+values (1, 50000, '2015-01-01');
+insert into salary (employee_id, amount, date)
+values (1, 55000, '2015-06-01');
+insert into salary (employee_id, amount, date)
+values (1, 52500, '2016-01-01');
+insert into salary (employee_id, amount, date)
+values (2, 75000, '2017-03-01');
+insert into salary (employee_id, amount, date)
+values (3, 65000, '2017-06-15');
+insert into salary (employee_id, amount, date)
+values (3, 80000, '2015-03-25');
+insert into salary (employee_id, amount, date)
+values (4, 40000, '2016-06-01');
+insert into salary (employee_id, amount, date)
+values (4, 50000, '2017-01-01');
+insert into salary (employee_id, amount, date)
+values (5, 50000, '2014-06-01');
+insert into salary (employee_id, amount, date)
+values (6, 50000, '2017-01-01');
+insert into salary (employee_id, amount, date)
+values (7, 57500, '2017-01-01');
+insert into salary (employee_id, amount, date)
+values (7, 62500, '2017-06-01')</string>
+		<string>drop table if exists employee;
+drop table if exists salary;
+CREATE TABLE employee (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255),
+    PRIMARY KEY (ID)
+);
+create table salary (
+id int not null auto_increment,
+employee_id INT foreign key,
+amount int,
+date varchar(255),
+primary key (id)
+)</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.18</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
