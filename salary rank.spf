@@ -64,33 +64,22 @@
 			<key>contentSortColIsAsc</key>
 			<true/>
 			<key>contentViewport</key>
-			<string>{{0, 0}, {1076, 720}}</string>
+			<string>{{0, 0}, {748, 530}}</string>
 			<key>isToolbarVisible</key>
 			<true/>
 			<key>queries</key>
-			<string>drop table if exists sales;
-
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-HAVING    rank = 0;</string>
+			<string>select (
+case name
+when @curType
+then @curRow := @curRow +1
+Else @curRow:= 1 and @curType := name end
+) as rank,
+name,
+amount
+from employee join salary
+on employee.id=salary.employee_id,
+(select @curRow:= 0, @curType := '') rank
+having rank = 0</string>
 			<key>table</key>
 			<string>employee</string>
 			<key>view</key>
@@ -107,6 +96,85 @@ HAVING    rank = 0;</string>
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>select (
+case name
+when @curType
+then @curRow := @curRow +1
+Else @curRow:= 1 and @curType := name end
+) as rank,
+name,
+amount
+from employee join salary
+on employee.id=salary.employee_id,
+(select @curRow:= 0, @curType := '') rank
+having rank = 0</string>
+		<string>select (
+case name
+when @curType
+then @curRow := @curRow +1
+Else @curRow:= 1 and @curType := name end
+) as rank,
+name,
+amount
+from employee join salary
+on employee.id=salary.employee_id
+(select @curRow:= 0, @curType := '') rank,</string>
+		<string>select (
+case name
+when @curType
+then @curRow := @curRow +1
+Else @curRow:= 1 and @curType := name end
+) as rank,
+name,
+amount
+from employee join salary,
+on employee.id=salary.employee_id
+(select @curRow:= 0, @curType := '') rank,</string>
+		<string>select ()
+case name
+when @curType
+then @curRow := @curRow +1
+Else @curRow:= 1 and @curType := name end
+) as rank,
+name,
+amount
+from employee join salary,
+on employee.id=salary.employee_id
+(select @curRow:= 0, @curType := '') rank,</string>
+		<string>select ()
+case name
+when @curType
+then @curRow := @curRow +1
+Else @curRow:= 1 and @curType := name end
+) as rank,
+name,
+amount
+from employee join salary,
+(select @curRow:= 0, @curType := '') rank,
+on employee.id=salary.employee_id</string>
+		<string>select ()
+case name
+when @curType
+then @curRow := @curRow +1
+Else @curRow:= 1 and @curType := name end
+) as rank,
+name,
+amount
+from employee join salary
+on employee.id=salary.employee_id</string>
+		<string>select name, amount
+case name
+when @curType
+then @curRow := @curRow +1
+Else @curRow:= 1 and @curType := name end as rank,
+from employee join salary
+on employee.id=salary.employee_id</string>
+		<string>select name, amount
+from employee join salary
+on employee.id=salary.employee_id</string>
+		<string>select name, amont
+from employee join salary
+on employee.id=salary.employee_id</string>
 		<string>drop table if exists sales;
 CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
 INSERT INTO sales VALUES ('Top', 'A', 10000);
@@ -326,186 +394,6 @@ SELECT    (
           revenue
 FROM      sales,
           (SELECT @curRow := 0, @curType := '') rank</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-         having rank = 1</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank;
-having	rank = 1</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-having	rank = 1</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-having	rank = 0</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-While	rank = 1</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-group BY  revenue</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-group BY  revenue asc</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-ORDER BY  revenue asc</string>
-		<string>drop table if exists sales;
-CREATE TABLE sales (cust_type varchar(10), cust_name varchar(10), revenue int);
-INSERT INTO sales VALUES ('Top', 'A', 10000);
-INSERT INTO sales VALUES ('Top', 'B', 9000);
-INSERT INTO sales VALUES ('Top', 'C', 8000);
-INSERT INTO sales VALUES ('Bottom', 'X', 5000);
-INSERT INTO sales VALUES ('Bottom', 'Y', 6000);
-INSERT INTO sales VALUES ('Bottom', 'Z', 7000);
-SELECT    ( 
-            CASE cust_type 
-            WHEN @curType 
-            THEN @curRow := @curRow + 1 
-            ELSE @curRow := 1 AND @curType := cust_type END
-          ) + 1 AS rank,
-          cust_type,
-          cust_name,
-          revenue
-FROM      sales,
-          (SELECT @curRow := 0, @curType := '') rank
-ORDER BY  cust_name asc, revenue asc</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>
