@@ -1,0 +1,17 @@
+DROP TABLE IF EXISTS tests;
+
+CREATE TABLE tests(
+	date DATE NOT NULL,
+	type ENUM('T', 'Q') NOT NULL,
+	max_score INT UNSIGNED NOT NULL,
+	class_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+);
+
+INSERT INTO tests VALUE
+	('2014-8-25', 'Q', 15, 1, NULL),
+	('2014-8-27', 'Q', 15, 1, NULL),
+	('2014-8-29', 'T', 30, 1, NULL),
+	('2014-8-29', 'T', 30, 1, NULL),
+	('2014-8-27', 'Q', 15, 4, NULL),
+	('2014-8-29', 'T', 30, 4, NULL);
