@@ -45,21 +45,17 @@
 			<integer>1</integer>
 			<key>contentSelection</key>
 			<data>
-			YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFy
-			Y2hpdmVyVCR0b3ASAAGGoK0HCBUWFxgZHSQoLDA0VSRudWxs0wkK
-			CwwQFFdOUy5rZXlzWk5TLm9iamVjdHNWJGNsYXNzow0OD4ACgAOA
-			BKMREhOABYAGgAiADFR0eXBlVHJvd3NUa2V5c18QJlNlbGVjdGlv
-			bkRldGFpbFR5cGVQcmltYXJ5S2V5ZWREZXRhaWxz0wkKCxobHKCg
-			gAfSHh8gIVokY2xhc3NuYW1lWCRjbGFzc2VzXxATTlNNdXRhYmxl
-			RGljdGlvbmFyeaMgIiNcTlNEaWN0aW9uYXJ5WE5TT2JqZWN00goL
-			JSehJoAJgAvSCykqK1lOUy5zdHJpbmeACld0ZXN0X2lk0h4fLS5f
-			EA9OU011dGFibGVTdHJpbmejLS8jWE5TU3RyaW5n0h4fMTJeTlNN
-			dXRhYmxlQXJyYXmjMTMjV05TQXJyYXnSHh8iNaIiI18QD05TS2V5
-			ZWRBcmNoaXZlctE4OVRkYXRhgAEACAARABoAIwAtADIANwBFAEsA
-			UgBaAGUAbABwAHIAdAB2AHoAfAB+AIAAggCHAIwAkQC6AMEAwgDD
-			AMUAygDVAN4A9AD4AQUBDgETARUBFwEZAR4BKAEqATIBNwFJAU0B
-			VgFbAWoBbgF2AXsBfgGQAZMBmAAAAAAAAAIBAAAAAAAAADoAAAAA
-			AAAAAAAAAAAAAAGa
+			YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJX
+			TlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAF
+			gAdUdHlwZVRyb3dzXxAdU2VsZWN0aW9uRGV0YWlsVHlwZU5TSW5k
+			ZXhTZXTSFwsYGVxOU1JhbmdlQ291bnQQAIAG0hscHR5aJGNsYXNz
+			bmFtZVgkY2xhc3Nlc1pOU0luZGV4U2V0oh8gWk5TSW5kZXhTZXRY
+			TlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVk
+			QXJjaGl2ZXLRJidUZGF0YYABAAgAEQAaACMALQAyADcAQABGAE0A
+			VQBgAGcAagBsAG4AcQBzAHUAdwB8AIEAoQCmALMAtQC3ALwAxwDQ
+			ANsA3gDpAPIA9wEEAQcBGQEcASEAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
 			</data>
 			<key>contentSortColIsAsc</key>
 			<true/>
@@ -68,9 +64,9 @@
 			<key>isToolbarVisible</key>
 			<true/>
 			<key>queries</key>
-			<string>DROP TABLE IF EXISTS test;
+			<string>DROP TABLE IF EXISTS tests;
 
-CREATE TABLE test(
+CREATE TABLE tests(
 	date DATE NOT NULL,
 	type ENUM('T', 'Q') NOT NULL,
 	max_score INT UNSIGNED NOT NULL,
@@ -78,7 +74,7 @@ CREATE TABLE test(
 	test_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
 );
 
-INSERT INTO test VALUES
+INSERT INTO tests VALUE
 	('2014-8-25', 'Q', 15, 1, NULL),
 	('2014-8-27', 'Q', 15, 1, NULL),
 	('2014-8-29', 'T', 30, 1, NULL),
@@ -86,8 +82,6 @@ INSERT INTO test VALUES
 	('2014-8-27', 'Q', 15, 4, NULL),
 	('2014-8-29', 'T', 30, 4, NULL);
 </string>
-			<key>table</key>
-			<string>test</string>
 			<key>view</key>
 			<string>SP_VIEW_CUSTOMQUERY</string>
 			<key>windowVerticalDividerPosition</key>
@@ -102,6 +96,37 @@ INSERT INTO test VALUES
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>DROP TABLE IF EXISTS tests;
+CREATE TABLE tests(
+	date DATE NOT NULL,
+	type ENUM('T', 'Q') NOT NULL,
+	max_score INT UNSIGNED NOT NULL,
+	class_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+);
+INSERT INTO tests VALUE
+	('2014-8-25', 'Q', 15, 1, NULL),
+	('2014-8-27', 'Q', 15, 1, NULL),
+	('2014-8-29', 'T', 30, 1, NULL),
+	('2014-8-29', 'T', 30, 1, NULL),
+	('2014-8-27', 'Q', 15, 4, NULL),
+	('2014-8-29', 'T', 30, 4, NULL)</string>
+		<string>DROP TABLE IF EXISTS test</string>
+		<string>DROP TABLE IF EXISTS test;
+CREATE TABLE test(
+	date DATE NOT NULL,
+	type ENUM('T', 'Q') NOT NULL,
+	max_score INT UNSIGNED NOT NULL,
+	class_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+);
+INSERT INTO test VALUE
+	('2014-8-25', 'Q', 15, 1, NULL),
+	('2014-8-27', 'Q', 15, 1, NULL),
+	('2014-8-29', 'T', 30, 1, NULL),
+	('2014-8-29', 'T', 30, 1, NULL),
+	('2014-8-27', 'Q', 15, 4, NULL),
+	('2014-8-29', 'T', 30, 4, NULL)</string>
 		<string>DROP TABLE IF EXISTS test;
 CREATE TABLE test(
 	date DATE NOT NULL,
@@ -223,27 +248,6 @@ salary.date,
 from employee inner join salary
 on employee.id=salary.employee_id
 group by name</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by salary.employee_id</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by employee_id</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by id</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>

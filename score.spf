@@ -60,19 +60,81 @@
 			<key>contentSortColIsAsc</key>
 			<true/>
 			<key>contentViewport</key>
-			<string>{{0, 0}, {694, 450}}</string>
+			<string>{{0, 0}, {1080, 639}}</string>
 			<key>isToolbarVisible</key>
 			<true/>
 			<key>queries</key>
-			<string>DROP TABLE IF EXISTS test;
+			<string>DROP TABLE IF EXISTS scores;
 
-CREATE TABLE score (
+CREATE TABLE scores (
 	student_id INT UNSIGNED NOT NULL,
-	event_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL,
 	score INT NOT NULL,
-	PRIMARY KEY(event_id, student_id)
+	PRIMARY KEY(test_id, student_id)
 );
-</string>
+
+INSERT INTO scores VALUES
+	(1, 1, 15),
+	(1, 2, 14),
+	(1, 3, 28),
+	(1, 4, 29),
+	(1, 5, 15),
+	(1, 6, 27),
+	(2, 1, 14),
+	(2, 2, 28),
+	(2, 3, 29),
+	(2, 4, 15),
+	(2, 5, 15),
+	(2, 6, 14),
+	(3, 1, 28),
+	(3, 2, 29),
+	(3, 3, 15),
+	(3, 4, 15),
+	(3, 5, 14),
+	(3, 6, 28),
+	(4, 1, 29),
+	(4, 2, 15),
+	(4, 3, 15),
+	(4, 4, 14),
+	(4, 5, 28),
+	(4, 6, 29),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(6, 1, 15),
+	(6, 2, 15),
+	(6, 3, 14),
+	(6, 4, 28),
+	(6, 5, 29),
+	(6, 6, 15),
+	(7, 1, 15),
+	(7, 2, 15),
+	(7, 3, 14),
+	(7, 4, 28),
+	(7, 5, 29),
+	(7, 6, 15),
+	(8, 1, 15),
+	(8, 2, 15),
+	(8, 3, 14),
+	(8, 4, 28),
+	(8, 5, 29),
+	(8, 6, 15),
+	(9, 1, 15),
+	(9, 2, 15),
+	(9, 3, 14),
+	(9, 4, 28),
+	(9, 5, 29),
+	(9, 6, 15),
+	(10, 1, 15),
+	(10, 2, 15),
+	(10, 3, 14),
+	(10, 4, 28),
+	(10, 5, 29),
+	(10, 6, 15);
+	</string>
 			<key>view</key>
 			<string>SP_VIEW_CUSTOMQUERY</string>
 			<key>windowVerticalDividerPosition</key>
@@ -87,6 +149,456 @@ CREATE TABLE score (
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>DROP TABLE IF EXISTS scores;
+CREATE TABLE scores (
+	student_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL,
+	score INT NOT NULL,
+	PRIMARY KEY(test_id, student_id)
+);
+INSERT INTO scores VALUES
+	(1, 1, 15),
+	(1, 2, 14),
+	(1, 3, 28),
+	(1, 4, 29),
+	(1, 5, 15),
+	(1, 6, 27),
+	(2, 1, 14),
+	(2, 2, 28),
+	(2, 3, 29),
+	(2, 4, 15),
+	(2, 5, 15),
+	(2, 6, 14),
+	(3, 1, 28),
+	(3, 2, 29),
+	(3, 3, 15),
+	(3, 4, 15),
+	(3, 5, 14),
+	(3, 6, 28),
+	(4, 1, 29),
+	(4, 2, 15),
+	(4, 3, 15),
+	(4, 4, 14),
+	(4, 5, 28),
+	(4, 6, 29),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(6, 1, 15),
+	(6, 2, 15),
+	(6, 3, 14),
+	(6, 4, 28),
+	(6, 5, 29),
+	(6, 6, 15),
+	(7, 1, 15),
+	(7, 2, 15),
+	(7, 3, 14),
+	(7, 4, 28),
+	(7, 5, 29),
+	(7, 6, 15),
+	(8, 1, 15),
+	(8, 2, 15),
+	(8, 3, 14),
+	(8, 4, 28),
+	(8, 5, 29),
+	(8, 6, 15),
+	(9, 1, 15),
+	(9, 2, 15),
+	(9, 3, 14),
+	(9, 4, 28),
+	(9, 5, 29),
+	(9, 6, 15),
+	(10, 1, 15),
+	(10, 2, 15),
+	(10, 3, 14),
+	(10, 4, 28),
+	(10, 5, 29),
+	(10, 6, 15)</string>
+		<string>DROP TABLE IF EXISTS score</string>
+		<string>DROP TABLE IF EXISTS score;
+CREATE TABLE score (
+	student_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL,
+	score INT NOT NULL,
+	PRIMARY KEY(test_id, student_id)
+);
+INSERT INTO score VALUES
+	(1, 1, 15),
+	(1, 2, 14),
+	(1, 3, 28),
+	(1, 4, 29),
+	(1, 5, 15),
+	(1, 6, 27),
+	(2, 1, 14),
+	(2, 2, 28),
+	(2, 3, 29),
+	(2, 4, 15),
+	(2, 5, 15),
+	(2, 6, 14),
+	(3, 1, 28),
+	(3, 2, 29),
+	(3, 3, 15),
+	(3, 4, 15),
+	(3, 5, 14),
+	(3, 6, 28),
+	(4, 1, 29),
+	(4, 2, 15),
+	(4, 3, 15),
+	(4, 4, 14),
+	(4, 5, 28),
+	(4, 6, 29),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(6, 1, 15),
+	(6, 2, 15),
+	(6, 3, 14),
+	(6, 4, 28),
+	(6, 5, 29),
+	(6, 6, 15),
+	(7, 1, 15),
+	(7, 2, 15),
+	(7, 3, 14),
+	(7, 4, 28),
+	(7, 5, 29),
+	(7, 6, 15),
+	(8, 1, 15),
+	(8, 2, 15),
+	(8, 3, 14),
+	(8, 4, 28),
+	(8, 5, 29),
+	(8, 6, 15),
+	(9, 1, 15),
+	(9, 2, 15),
+	(9, 3, 14),
+	(9, 4, 28),
+	(9, 5, 29),
+	(9, 6, 15),
+	(10, 1, 15),
+	(10, 2, 15),
+	(10, 3, 14),
+	(10, 4, 28),
+	(10, 5, 29),
+	(10, 6, 15)</string>
+		<string>DROP TABLE IF EXISTS score;
+CREATE TABLE score (
+	student_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL,
+	score INT NOT NULL,
+	PRIMARY KEY(test_id, student_id)
+);
+INSERT INTO score VALUES
+	(1, 1, 15),
+	(1, 2, 14),
+	(1, 3, 28),
+	(1, 4, 29),
+	(1, 5, 15),
+	(1, 6, 27),
+	(2, 1, 14),
+	(2, 2, 28),
+	(2, 3, 29),
+	(2, 4, 15),
+	(2, 5, 15),
+	(2, 6, 14),
+	(3, 1, 28),
+	(3, 2, 29),
+	(3, 3, 15),
+	(3, 4, 15),
+	(3, 5, 14),
+	(3, 6, 28),
+	(4, 1, 29),
+	(4, 2, 15),
+	(4, 3, 15),
+	(4, 4, 14),
+	(4, 5, 28),
+	(4, 6, 29),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(6, 1, 15),
+	(6, 2, 15),
+	(6, 3, 14),
+	(6, 4, 28),
+	(6, 5, 29),
+	(6, 6, 15),
+	(7, 1, 15),
+	(7, 2, 15),
+	(7, 3, 14),
+	(7, 4, 28),
+	(7, 5, 29),
+	(7, 6, 15),
+	(8, 1, 15),
+	(8, 2, 15),
+	(8, 3, 14),
+	(8, 4, 28),
+	(8, 5, 29),
+	(8, 6, 15),
+	(9, 1, 15),
+	(9, 2, 15),
+	(9, 3, 14),
+	(9, 4, 28),
+	(9, 5, 29),
+	(9, 6, 15),
+	(10, 1, 15),
+	(10, 2, 15),
+	(10, 3, 14),
+	(10, 4, 28),
+	(10, 5, 29),
+	(10, 6, 15),
+)</string>
+		<string>INSERT INTO score VALUES
+	(1, 1, 15),
+	(1, 2, 14),
+	(1, 3, 28),
+	(1, 4, 29),
+	(1, 5, 15),
+	(1, 6, 27),
+	(2, 1, 14),
+	(2, 2, 28),
+	(2, 3, 29),
+	(2, 4, 15),
+	(2, 5, 15),
+	(2, 6, 14),
+	(3, 1, 28),
+	(3, 2, 29),
+	(3, 3, 15),
+	(3, 4, 15),
+	(3, 5, 14),
+	(3, 6, 28),
+	(4, 1, 29),
+	(4, 2, 15),
+	(4, 3, 15),
+	(4, 4, 14),
+	(4, 5, 28),
+	(4, 6, 29),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(6, 1, 15),
+	(6, 2, 15),
+	(6, 3, 14),
+	(6, 4, 28),
+	(6, 5, 29),
+	(6, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15)</string>
+		<string>DROP TABLE IF EXISTS score;
+CREATE TABLE score (
+	student_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL,
+	score INT NOT NULL,
+	PRIMARY KEY(test_id, student_id)
+)</string>
+		<string>DROP TABLE IF EXISTS score;
+CREATE TABLE score (
+	student_id INT UNSIGNED NOT NULL,
+	test_id INT UNSIGNED NOT NULL,
+	score INT NOT NULL,
+	PRIMARY KEY(test_id, student_id)
+);
+INSERT INTO score VALUES
+	(1, 1, 15),
+	(1, 2, 14),
+	(1, 3, 28),
+	(1, 4, 29),
+	(1, 5, 15),
+	(1, 6, 27),
+	(2, 1, 14),
+	(2, 2, 28),
+	(2, 3, 29),
+	(2, 4, 15),
+	(2, 5, 15),
+	(2, 6, 14),
+	(3, 1, 28),
+	(3, 2, 29),
+	(3, 3, 15),
+	(3, 4, 15),
+	(3, 5, 14),
+	(3, 6, 28),
+	(4, 1, 29),
+	(4, 2, 15),
+	(4, 3, 15),
+	(4, 4, 14),
+	(4, 5, 28),
+	(4, 6, 29),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(6, 1, 15),
+	(6, 2, 15),
+	(6, 3, 14),
+	(6, 4, 28),
+	(6, 5, 29),
+	(6, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15)</string>
+		<string>DROP TABLE IF EXISTS score;
+CREATE TABLE score (
+	student_id INT UNSIGNED NOT NULL,
+	event_id INT UNSIGNED NOT NULL,
+	score INT NOT NULL,
+	PRIMARY KEY(test_id, student_id)
+)</string>
+		<string>DROP TABLE IF EXISTS score;
+CREATE TABLE score (
+	student_id INT UNSIGNED NOT NULL,
+	event_id INT UNSIGNED NOT NULL,
+	score INT NOT NULL,
+	PRIMARY KEY(event_id, student_id)
+);
+INSERT INTO score VALUES
+	(1, 1, 15),
+	(1, 2, 14),
+	(1, 3, 28),
+	(1, 4, 29),
+	(1, 5, 15),
+	(1, 6, 27),
+	(2, 1, 14),
+	(2, 2, 28),
+	(2, 3, 29),
+	(2, 4, 15),
+	(2, 5, 15),
+	(2, 6, 14),
+	(3, 1, 28),
+	(3, 2, 29),
+	(3, 3, 15),
+	(3, 4, 15),
+	(3, 5, 14),
+	(3, 6, 28),
+	(4, 1, 29),
+	(4, 2, 15),
+	(4, 3, 15),
+	(4, 4, 14),
+	(4, 5, 28),
+	(4, 6, 29),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(6, 1, 15),
+	(6, 2, 15),
+	(6, 3, 14),
+	(6, 4, 28),
+	(6, 5, 29),
+	(6, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15),
+	(5, 1, 15),
+	(5, 2, 15),
+	(5, 3, 14),
+	(5, 4, 28),
+	(5, 5, 29),
+	(5, 6, 15)</string>
+		<string>DROP TABLE IF EXISTS score;
+CREATE TABLE score (
+	student_id INT UNSIGNED NOT NULL,
+	event_id INT UNSIGNED NOT NULL,
+	score INT NOT NULL,
+	PRIMARY KEY(event_id, student_id)
+)</string>
+		<string>DROP TABLE IF EXISTS test;
+CREATE TABLE score (
+	student_id INT UNSIGNED NOT NULL,
+	event_id INT UNSIGNED NOT NULL,
+	score INT NOT NULL,
+	PRIMARY KEY(event_id, student_id)
+)</string>
+		<string>DROP TABLE IF EXISTS test</string>
 		<string>CREATE TABLE score (
 	student_id INT UNSIGNED NOT NULL,
 	event_id INT UNSIGNED NOT NULL,
@@ -128,83 +640,6 @@ CREATE TABLE class(
 	name VARCHAR(30) NOT NULL,
 	class_id UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
 )</string>
-		<string>SELECT * FROM student</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-group by name
-on employee.id=salary.employee_id</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by amount</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by name
-having salary &gt; 0</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by employee.name</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by name</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by salary.employee_id</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by employee_id</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by id</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employeeinner join salary
-on employee.id=salary.employee_id</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee
-inner join salary on employee.id=salary.employee_id;
-group by employee.name</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>

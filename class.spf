@@ -64,14 +64,14 @@
 			<key>isToolbarVisible</key>
 			<true/>
 			<key>queries</key>
-			<string>DROP TABLE IF EXISTS class;
+			<string>DROP TABLE IF EXISTS classes;
 
-CREATE TABLE class(
+CREATE TABLE classes(
 	name VARCHAR(30) NOT NULL,
 	class_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
 );
 
-INSERT INTO class VALUES
+INSERT INTO classes VALUES
 ('English', NULL), ('Speech', NULL), ('Literature', NULL),
 ('Algebra', NULL), ('Geometry', NULL), ('Trigonometry', NULL),
 ('Calculus', NULL), ('Earth Science', NULL), ('Biology', NULL),
@@ -91,6 +91,17 @@ INSERT INTO class VALUES
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>DROP TABLE IF EXISTS classes;
+CREATE TABLE classes(
+	name VARCHAR(30) NOT NULL,
+	class_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
+);
+INSERT INTO classes VALUES
+('English', NULL), ('Speech', NULL), ('Literature', NULL),
+('Algebra', NULL), ('Geometry', NULL), ('Trigonometry', NULL),
+('Calculus', NULL), ('Earth Science', NULL), ('Biology', NULL),
+('Chemistry', NULL), ('Physics', NULL), ('History', NULL), ('Art', NULL), ('Gym', NULL)</string>
+		<string>DROP TABLE IF EXISTS class</string>
 		<string>DROP TABLE IF EXISTS class;
 CREATE TABLE class(
 	name VARCHAR(30) NOT NULL,
@@ -206,17 +217,6 @@ salary.amount,
 salary.date,
 @curRank := @curRank + 1 as rank
 from employee, (select @curRank := 0)
-inner join salary on employee.id=salary.employee_id</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee, (select @curRank := 0) q
-inner join salary on employee.id=salary.employee_id</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date
-from employee
 inner join salary on employee.id=salary.employee_id</string>
 	</array>
 	<key>rdbms_type</key>

@@ -60,17 +60,22 @@
 			<key>contentSortColIsAsc</key>
 			<true/>
 			<key>contentViewport</key>
-			<string>{{0, 0}, {694, 450}}</string>
+			<string>{{0, 0}, {1080, 639}}</string>
 			<key>isToolbarVisible</key>
 			<true/>
 			<key>queries</key>
-			<string>DROP TABLE IF EXISTS absense;
+			<string>DROP TABLE IF EXISTS absences;
 
-CREATE TABLE absense(
+CREATE TABLE absences(
 	student_id INT UNSIGNED NOT NULL,
 	date DATE NOT NULL,
 	PRIMARY KEY(student_id, date)
-);</string>
+);
+
+INSERT INTO absences VALUES
+	(6, '2014-08-29'),
+	(1, '2014-08-29'),
+	(4, '2014-08-27');</string>
 			<key>view</key>
 			<string>SP_VIEW_CUSTOMQUERY</string>
 			<key>windowVerticalDividerPosition</key>
@@ -85,6 +90,49 @@ CREATE TABLE absense(
 	<array/>
 	<key>queryHistory</key>
 	<array>
+		<string>DROP TABLE IF EXISTS absences;
+CREATE TABLE absences(
+	student_id INT UNSIGNED NOT NULL,
+	date DATE NOT NULL,
+	PRIMARY KEY(student_id, date)
+);
+INSERT INTO absences VALUES
+	(6, '2014-08-29'),
+	(1, '2014-08-29'),
+	(4, '2014-08-27')</string>
+		<string>DROP TABLE IF EXISTS absences;
+CREATE TABLE absences(
+	student_id INT UNSIGNED NOT NULL,
+	date DATE NOT NULL,
+	PRIMARY KEY(student_id, date)
+);
+INSERT INTO abesences VALUES
+	(6, '2014-08-29'),
+	(1, '2014-08-29'),
+	(4, '2014-08-27')</string>
+		<string>DROP TABLE IF EXISTS absenses</string>
+		<string>CREATE TABLE absenses(
+	student_id INT UNSIGNED NOT NULL,
+	date DATE NOT NULL,
+	PRIMARY KEY(student_id, date)
+)</string>
+		<string>DROP TABLE IF EXISTS absenses;
+CREATE TABLE absenses(
+	student_id INT UNSIGNED NOT NULL,
+	date DATE NOT NULL,
+	PRIMARY KEY(student_id, date)
+);
+INSERT INTO abesences VALUES
+	(6, '2014-08-29'),
+	(1, '2014-08-29'),
+	(4, '2014-08-27')</string>
+		<string>DROP TABLE IF EXISTS absenses;
+CREATE TABLE absenses(
+	student_id INT UNSIGNED NOT NULL,
+	date DATE NOT NULL,
+	PRIMARY KEY(student_id, date)
+)</string>
+		<string>DROP TABLE IF EXISTS absense</string>
 		<string>CREATE TABLE absense(
 	student_id INT UNSIGNED NOT NULL,
 	date DATE NOT NULL,
@@ -152,55 +200,6 @@ salary.date,
 from employee inner join salary
 on employee.id=salary.employee_id
 group by amount</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by name
-having salary &gt; 0</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by employee.name</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by name</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by salary.employee_id</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by employee_id</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employee inner join salary
-on employee.id=salary.employee_id
-group by id</string>
-		<string>select employee.name, 
-salary.amount, 
-salary.date,
-@curRank := @curRank + 1 as rank
-from employeeinner join salary
-on employee.id=salary.employee_id</string>
 	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>
